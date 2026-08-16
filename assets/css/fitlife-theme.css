@@ -1,0 +1,59 @@
+/* FitLife x Activitar — theme bridge
+   Keeps Activitar's layout/animations, ties brand color to FitLife orange (#e4381c) */
+
+.header-section .logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-section .logo a i {
+    color: #e4381c;
+}
+
+.header-section .top-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fl-auth-link {
+    color: #ffffff !important;
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all .25s ease;
+}
+
+.fl-auth-link:hover {
+    color: #e4381c !important;
+}
+
+.fl-auth-cta {
+    background: linear-gradient(to right, #e4381c, #e16521);
+    color: #ffffff !important;
+}
+
+.fl-auth-cta:hover {
+    background: linear-gradient(to right, #e16521, #e4381c);
+    color: #ffffff !important;
+}
+
+/* Footer link back respects Colorlib CC BY 3.0 attribution requirement */
+.copyright-text .ct-inside a {
+    color: #e4381c;
+}
+
+.copyright-text .ct-inside a:hover {
+    text-decoration: underline;
+}

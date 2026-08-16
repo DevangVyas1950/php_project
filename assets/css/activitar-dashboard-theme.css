@@ -1,0 +1,247 @@
+/* =========================================================
+   FitLife × Activitar — full site-wide theme
+   Applies Activitar's typography, buttons, and card language
+   to every admin/user module. Loaded AFTER admin.css/user.css/
+   dashboard.css so these rules win without touching layout
+   logic or any JS-referenced class/id names.
+   ========================================================= */
+
+:root {
+    --fl-orange: #e4381c;
+    --fl-orange-2: #e16521;
+    --fl-orange-dark: #b8290e;
+    --fl-ink: #111111;
+    --fl-muted: #6b7280;
+    --fl-bg: #f4f6f9;
+    --fl-card-radius: 12px;
+    --fl-shadow: 0 4px 18px rgba(17, 17, 17, 0.06);
+    --fl-shadow-hover: 0 10px 28px rgba(228, 56, 28, 0.16);
+}
+
+/* ---------- Typography ---------- */
+body {
+    font-family: 'Nunito Sans', 'Segoe UI', sans-serif !important;
+    color: var(--fl-ink);
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar-logo,
+.card-header h4,
+.topbar h2,
+.stat-num,
+.logo,
+.section-title,
+button, .btn, .primary-btn {
+    font-family: 'Oswald', sans-serif;
+}
+
+.topbar h2 {
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* ---------- Sidebar (admin + user) ---------- */
+.sidebar {
+    background: linear-gradient(180deg, #1a1a1a 0%, #262626 100%) !important;
+    border-right: none !important;
+}
+
+.sidebar-logo {
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-logo i {
+    color: var(--fl-orange);
+}
+
+.sidebar-section {
+    color: rgba(255, 255, 255, 0.35) !important;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.sidebar nav a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all .2s ease;
+}
+
+.sidebar nav a:hover {
+    color: #ffffff !important;
+    background: rgba(228, 56, 28, 0.12) !important;
+    border-left-color: var(--fl-orange-2);
+}
+
+.sidebar nav a.active {
+    color: #ffffff !important;
+    background: linear-gradient(90deg, rgba(228, 56, 28, 0.25), rgba(228, 56, 28, 0.05)) !important;
+    border-left-color: var(--fl-orange);
+    font-weight: 700;
+}
+
+.sidebar-footer a {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.sidebar-footer a:hover {
+    color: var(--fl-orange) !important;
+}
+
+/* ---------- Topbar ---------- */
+.topbar {
+    border-bottom: 3px solid var(--fl-orange);
+    box-shadow: var(--fl-shadow) !important;
+}
+
+.admin-badge {
+    background: linear-gradient(to right, var(--fl-orange), var(--fl-orange-2)) !important;
+    color: #ffffff !important;
+}
+
+/* ---------- Cards & stat cards ---------- */
+.card, .stat-card {
+    border-radius: var(--fl-card-radius) !important;
+    box-shadow: var(--fl-shadow) !important;
+    border: 1px solid rgba(17, 17, 17, 0.04);
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.card:hover, .stat-card:hover {
+    box-shadow: var(--fl-shadow-hover) !important;
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header h4 {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stat-icon {
+    background: linear-gradient(135deg, var(--fl-orange), var(--fl-orange-2)) !important;
+    color: #ffffff !important;
+}
+
+.stat-card.green .stat-icon,
+.stat-card.blue .stat-icon,
+.stat-card.orange .stat-icon,
+.stat-card.red .stat-icon {
+    background: linear-gradient(135deg, var(--fl-orange), var(--fl-orange-2)) !important;
+}
+
+.stat-num {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* ---------- Buttons — Activitar gradient signature ---------- */
+button,
+.btn,
+.btn-primary,
+.btn-sm,
+.btn-weight,
+input[type="submit"],
+button[type="submit"] {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 6px !important;
+    border: none;
+    transition: all .3s ease;
+}
+
+.btn-primary,
+.btn-weight,
+button[type="submit"],
+input[type="submit"] {
+    background: linear-gradient(to right, var(--fl-orange) 0%, var(--fl-orange-2) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(228, 56, 28, 0.28);
+}
+
+.btn-primary:hover,
+.btn-weight:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background: linear-gradient(to right, var(--fl-orange-2) 0%, var(--fl-orange) 100%) !important;
+    box-shadow: 0 6px 20px rgba(228, 56, 28, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: linear-gradient(to right, #dc2626, #b91c1c) !important;
+}
+
+.btn-info {
+    background: linear-gradient(to right, #2563eb, #1e40af) !important;
+}
+
+/* ---------- Forms ---------- */
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    border-radius: 8px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--fl-orange) !important;
+    box-shadow: 0 0 0 3px rgba(228, 56, 28, 0.12);
+    outline: none;
+}
+
+/* ---------- Tables ---------- */
+table thead {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .3px;
+}
+
+/* ---------- Menu toggle button ---------- */
+.menu-btn {
+    color: var(--fl-orange) !important;
+}
+
+/* ---------- User info chip ---------- */
+.user-info {
+    font-weight: 600;
+}
+
+.user-info i {
+    color: var(--fl-orange);
+}
