@@ -1,4 +1,4 @@
-<?php dil ka ye kya haaal hain jane kya kar gaye jaise
+<?php dil ka ye kya haaal hain jane kya kar gaye jaise andhero main gtum
 require_once 'config/constants.php';
 if (is_logged_in()) {
     if (is_admin()) redirect('admin/dashboard.php');
