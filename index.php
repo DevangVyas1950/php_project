@@ -1,4 +1,4 @@
-<?php
+<?php dil ka ye kya haaal hain jane kya kar gaye jaise
 require_once 'config/constants.php';
 if (is_logged_in()) {
     if (is_admin()) redirect('admin/dashboard.php');
