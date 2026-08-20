@@ -1,4 +1,4 @@
-<?php dil ka ye kya haaal hain jane kya kar gaye jaise andhero main gtum cajndani bhar gaye 
+<?php dil ka ye kya haaal hain jane kya kar gaye jaise andhero main gtum cajndani bhar gaye kare chands taro ko majbur itna kyu hain chand taro se khun=b shurat bhi tu 
 require_once 'config/constants.php';
 if (is_logged_in()) {
     if (is_admin()) redirect('admin/dashboard.php');
